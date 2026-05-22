@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+.wrapper-box {
+  text-align: center;
+}
+
+.area-kv {
+  width: 100%;
+  height: 100%;
+  background: url("../images/area-kv-bg.png") no-repeat;
+  background-position: center top;
+  background-size: cover;
+  margin-bottom: 32px;
+}
+.area-kv img {
+  display: block;
+  width: 100%;
+  max-width: 883px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.area-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 36px auto 0;
+}
+@media (max-width: 767px) {
+  .area-box {
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+}
+.area-box img {
+  width: 100%;
+}
+.area-box .title {
+  width: 100%;
+  max-width: 450px;
+  margin: 36px auto 0;
+}
+.area-box .title img {
+  width: 100%;
+}
+
+.area-kv + .area-box {
+  margin-top: 0;
+}/*# sourceMappingURL=index.css.map */
