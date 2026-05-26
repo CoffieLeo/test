@@ -24,9 +24,31 @@ body {
 .area-kv img {
   display: block;
   width: 100%;
-  max-width: 883px;
   height: auto;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .area-kv img {
+    max-width: 883px;
+  }
+}
+
+.for-pc {
+  display: block !important;
+}
+@media (max-width: 767px) {
+  .for-pc {
+    display: none !important;
+  }
+}
+
+.for-m {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .for-m {
+    display: block !important;
+  }
 }
 
 .area-box {
