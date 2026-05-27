@@ -1,0 +1,31 @@
+@charset "utf-8";
+	
+/*手機黏人精*/
+.fix_list{ position:absolute; top: 1.2vw; left:2.2vw; z-index: 15; height:8vw; width:8vw; /*background-color:rgba(0,0,0,0.3); border-radius:1vw; box-shadow: 0 0 10px rgba(0,0,0,0.2);*/}
+.fix_list.active2 { position:fixed; width:100%; left:0;}
+.fix_lista a{ text-decoration:none;}
+.fix_list::after{ content:" ";display: block; width:600vw; height:600vw; border-radius:50%; background-color:#f3f3f3; position:fixed; top:-300vw; right:-200vw; z-index:20; transform:scale(0); transition:all 0.8s;}
+.fix_list.active::after{ transform: scale(1);}
+.texthere{ position:fixed; top:0vw ;left:0; z-index: 21;text-align: center;display: none;}
+.texthere .alink{color: #fff;font-size: 5vw; line-height:12vw; font-weight:500; opacity: 0;transform:opacity 0.6s linear;}
+.texthere.active{display: block;}
+.texthere .alink.active{opacity: 1; animation-delay: 0.2s;}
+.fix_list.active::after{ transform: scale(1);}
+.click_btn{z-index:999;position: absolute; right:0; top:0;}
+nav { position: absolute;  left:-9.5vw;  top: -0.6vw;  width: 9vw;  height: 9vw;}
+.menu-icon { background: transparent;  width: 9vw;  height: 9vw;  margin: 0px;  position: relative;  cursor: pointer;}
+.menu-icon span,
+.menu-icon span:before,
+.menu-icon span:after { cursor: pointer;  border-radius: 1px;  height: 2px;  width: 5vw;  background:#333333;  position: absolute;  left: 20%;  top: 50%;  display: block;  content: '';  transition: all 0.5s ease-in-out;}
+.menu-icon span:before { left: 0; top: -1.8vw;}
+.menu-icon span:after { left: 0; top: 1.8vw;}
+
+/*點擊後中間消失*/
+.menu-icon.close span { background-color: transparent;}
+
+/*上下往中間移*/
+.menu-icon.close span:before,
+.menu-icon.close span:after { top: 0;}
+/*旋轉成X*/
+.menu-icon.close span:before { transform: rotate(135deg);}
+.menu-icon.close span:after { transform: rotate(-135deg);}

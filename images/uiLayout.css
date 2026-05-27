@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/*共用--區塊_all*/
+.Area { z-index:1; position: relative; margin:0 auto; padding:0; border-radius:0; text-align:center; }
+.Area a { position:relative; display:block;} 
+.Area .go_bt { -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -ms-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease;}
+.Area .go_bt:hover { -webkit-transform:none; -moz-transform:none; -ms-transform:none; -o-transform:none; transform:none; filter:brightness(110%);}
+  @media screen and (min-width:768px){
+    .Area .go_bt:hover { -webkit-transform:translateY(-6px); -moz-transform:translateY(-6px); -ms-transform:translateY(-6px); -o-transform:translateY(-6px); transform:translateY(-6px);}
+  }
+  /*寬度,間距*/
+  .Area1220 { margin:0 auto; width:100%;}
+  .Area960 { margin:0 auto; width:100%;}
+  .Areabottom { margin-bottom:40px;}
+    @media screen and (min-width:768px){
+      .Area1220 { width:1220px;}
+      .Area960 { width:960px;}
+      .Areabottom { margin-bottom:80px;}
+    }
+
+
+/*活動紀錄查詢浮層*/
+.refArea { width:700px; position:relative; display:block; margin: 0 auto 10px; padding:0px; height: auto; background-color:rgba(0,0,0,0.8); border-radius:20px;}
+.refArea .closeBN a { z-index:2; position:absolute; top:-20px; right:-20px; display:block; width:40px; height:40px; border-radius:50%; border:solid 2px #999999; font:bold 40px/1em "Century Gothic"; color:#FFF; text-align:center; background-color:rgba(0%,0%,0%,0.5);text-decoration: none;}
+.refArea .closeBN a:hover { background-color:#666; text-decoration:none}
+.refArea .title  { margin:0 50px 10px; border-bottom:1px solid #ffd800; font:bold 45px/2em "微軟正黑體","Microsoft JhengHei", Arial, Helvetica;letter-spacing: -0.05em;  color:#ffd800; text-align:center}
+.refArea .title2 { margin:20px auto 0px; font:bold 28px/1em "微軟正黑體","Microsoft JhengHei", Arial, Helvetica;letter-spacing: 0.1em;  color:#fff; text-align:center}
+.refArea .title3 { margin-top:10px; font:bold 18px/1em "微軟正黑體","Microsoft JhengHei", Arial, Helvetica;letter-spacing: 0.1em;  color:#fff; text-align:center}
+.refArea .ref_Date ul { margin: 0 auto; padding: 10px 50px;}
+.refArea .ref_Date li { display:inline-block; margin:5px; padding:0px; width:70px; height:70px;border-radius:50%; text-shadow:rgba(0%,0%,0%,0.15) 1px 1px; color:#fff; letter-spacing: -0.05em; text-align:center; background-color:#979797;text-align:center; box-shadow: 0px 0px 3px 3px rgba(0%,0%,0%,0.15),0px 0px 0px 5px rgba(100%,100%,100%,0.1) inset;}
+.refArea .ref_Date li .month {font:bold 20px/1.5em "Century Gothic"; margin: 5px auto 0 auto; border-bottom:#FFF solid 1px; width:80%}
+.refArea .ref_Date li .date {font:bold 20px/1em "Century Gothic"; margin:0; margin-top:4px}
+.refArea .ref_Date li.opendate { background-color:#000000; box-shadow: 0px 0px 3px 3px rgba(0%,0%,0%,0.15),0px 0px 0px 5px rgba(100%,100%,100%,0.1) inset;color:#FFDD00;  }
+.refArea .ref_List table { margin:0 auto; padding: 10px 0;}
+.refArea .ref_List .table2 {font:bold 20px/1.2em "微軟正黑體","Microsoft JhengHei", Arial, Helvetica;letter-spacing: -0.05em; color:#FFF; text-align:center; background-color:#999}
+.refArea .ref_List .table3 {font:bold 20px/1.2em "微軟正黑體","Microsoft JhengHei", Arial, Helvetica;letter-spacing: 0.0001em; color:#000; text-align:center; background-color:#FFF}
+.refArea .ref_List table td,
+.refArea .ref_List table td { border: 1px solid #340d4d; font: bold 20px/1.5em "微軟正黑體", "Microsoft JhengHei", "Century Gothic";}
+.refArea .ref_List .txtsmall { padding:40px; padding-top:10px; font: 12px/18px "微軟正黑體", "Microsoft JhengHei", "Century Gothic"; color:#fff;  text-align:left;}
+	@media screen and (max-width:767px){
+		.refArea { width:90%;}
+		.refArea .closeBN a { top:-15px; right:-15px; width:30px; height:30px; font-size:30px;}
+		.refArea .title  { margin:0 5%; font-size:30px;}
+		.refArea .title2 { margin:10px auto 0px; font-size:20px; }
+		.refArea .title3 { margin:10px auto 0px; font-size:14px; }
+		.refArea .ref_Date ul { margin:0 auto; padding: 10px 20px 20px; text-align:center;}
+		.refArea .ref_Date li { margin:3px; width:40px; height:40px;}
+		.refArea .ref_Date li .month { font-size:12px; line-height:1.3em; margin-top:4px;}
+		.refArea .ref_Date li .date { margin-top:2px; font-size:12px;}
+		.refArea .ref_List table { }
+		.refArea .ref_List .table2 { font-size:12px;}
+		.refArea .ref_List .table3 { font-size:12px;}
+		.refArea .ref_List .table2 td,
+		.refArea .ref_List .table3 td { font-size:12px; line-height:1.2em;}
+		.refArea .ref_List .txtsmall { padding:20px; padding-top:10px; font-size:12px; line-height:18px; color:#fff;  text-align:left;}
+	}
+	
+
+/*浮層嘿嘿*/
+.blackBox_play {}
+.blackBox { display:none; z-index:12; position:absolute; top:0px; left:0px; width:100%; height:100%; background-color: rgba(34,34,34,0.75); }
+.blackBox * { font-family:"微軟正黑體"; box-sizing:border-box;}
+.blackBox  a { text-decoration:none;}
+/*浮層基本*/
+.blackBox .box .button {  border-top:1px solid #d6d6d6; text-align:center; font-size:1.25rem; line-height:3.5rem; font-weight:bold;}
+.blackBox .box .but-close { clear:both; width:100%;}
+.blackBox .box .but-close a { display:inline-block;  width:90%; height:100%; color:#000;}
+.blackBox .box h3 span.close { position:absolute; top:6px; right:5px; display:block; border:2px solid #000; border-radius:5px; width:63px; height:33px; font-size:1rem; line-height:2rem; text-align:center;}
+.blackBox .box h3 span.close a { display:inline-block; width:100%; height:100%; color:#000;}
+.blackBox .Boxclose { position:absolute; top:0px; left:0px; width:100%; height:100%; background-color: transparent;}
+.blackBox .box h4 {height: 3rem; font-size: 0.8rem; font-weight: 100; text-align: center; color: #000;}
+
+/*通知浮層*/
+.agreeArea { z-index:1; position:relative; top:5%; margin:0 auto 30px; width:90%; max-width:900px;text-align:left; font-family:"Century Gothic", "微軟正黑體", sans-serif; /*text-align:justify; word-break:break-all;*/}
+.agreeArea img{ width:100%; height:auto;}
+.agreeArea .box { border-radius:10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); background-color:#fff; overflow:hidden;}
+.agreeArea .box .txtArea {overflow:auto; overflow-y:auto; -webkit-overflow-scrolling:touch;}
+.agreeArea .box h3 { margin:0; padding:0; height:3rem; font-size:1.8em; font-weight:800;line-height:3rem;color:#000;text-align:center; background-color:#ffb100;}
+.agreeArea .box h4 { margin:0 0 0 10px; padding:0; height:3rem; font-size:1.5em; font-weight:800;line-height:3rem; ; color:#000;text-align:left;  }
+.agreeArea .box p { margin:10px auto; margin-top:1.2em; padding:0 0 0 24px; text-align:center; font-size:1em;  line-height:1.2em; color:#000;}
+.agreeArea .box p b { display:block; padding-bottom:0px;}
+.agreeArea .box p span { }
+.agreeArea .box .qrcodeimg { text-align:center; }
+.agreeArea .box .qrcodeimg a { color:#006afe;}
+.agreeArea .box .qrcodeimg img { width:100%; height:auto;}
+.agreeArea .box .agree_table table { margin:20px auto; border-collapse:collapse; width:90%; text-align:center;}
+.agreeArea .box .agree_table th { padding:5px; border:1px solid #CCC; width:33%; font-size:1.2em; }
+.agreeArea .box .agree_table td { padding:5px; border:1px solid #CCC; font-size:0.9em; }
+.agreeArea .box .agree_table th a{ color:#c70026; text-decoration:underline;}
+.agreeArea .box .xxx{ display:block; width:80%; height:40px; font-size:1.5em; text-align:center; line-height:40px; color:#FFF; background-color:#7048A0; margin:0 auto; margin-bottom:20px; margin-top:10px; font-weight:bold; border-radius:10px;}
+.agreeArea .box ul,
+.agreeArea .box ol { margin:0;}
+.agreeArea .box li { margin:0 20px 10px 0px; font-size:1.2em; text-align: justify;}
+.agreeArea .box table { margin: 0 5%; width:90%;  border-collapse:collapse;    text-align: center;}
+.agreeArea .box th { padding:5px; border:1px solid #CCC; background:#eee; font-size:1.2em; }
+.agreeArea .box td { padding:5px; border:1px solid #CCC; font-size:1.2em; vertical-align:top; }
+.agreeArea .box table ul,
+.agreeArea .box table ol { padding:0 0 0 20px;}
+.agreeArea .box table li { margin:0 0 10px 0px;}
+	@media screen and (max-width:767px){
+	.agreeArea .box h3 { margin:0; padding:0; height:3rem; font-size:1.5em; font-weight:800;line-height:3rem;color:#000;text-align:center; background-color:#ffd710;}
+	.agreeArea .box h4 { margin:0 0 0 10px; padding:0; height:2.8rem; font-size:1.2em; font-weight:800;line-height:3rem; ; color:#000;text-align:left;  }
+	.agreeArea .box p { margin:10px auto; margin-top:1em; padding:0 0 0 24px; text-align:center; font-size:0.8em;  line-height:1.1em; color:#000;}
+	}
+
+
+	
+	
+	
+/*共用--輪播基本設定*/
+.Area_swiper { position:relative; margin:0 auto; -webkit-box-sizing:border-box; box-sizing:border-box; overflow: hidden;}
+.Area_swiper_box { z-index:1; padding-bottom:25px;}
+.Area_swiper_box.Area_swiper_box_relative { position:relative;}
+.Area_swiper_box.Area_swiper_box_absolute { position:absolute; top:0; left:0; right:0; bottom:0;}
+.Area_swiper_box .swiper-wrapper { margin:0; padding:0; list-style:none;}
+.Area_swiper_box .swiper-wrapper:after { content:""; display:block; clear:both;}
+.Area_swiper_box .swiper-slide { margin:0; padding:0;}
+.Area_swiper_box .pagination { bottom:0px !important; /*transform:scale(0.7);*/}
+    @media screen and (max-width:767px){
+      .Area_swiper { }
+      .Area_swiper_box { padding-bottom: 5vw;}
+    }
+    /*按忸*/
+    .button.swiper-button-next,
+    .button.swiper-button-prev { outline: none; font-weight: bolder;} 
+    @media screen and (max-width:767px){
+      .button.swiper-button-next,
+      .button.swiper-button-prev { display:none !important;} 
+    }
+    /*輪播套公版時修正*/
+    .Area_swiper_box .PD_layout { position: static;}
+
+    /*輪播樣式調整--按鈕/小圓點/進度條*/
+    .Area_boxstyle_pagination .swiper-pagination-bullet { background-color: #d8b29f; opacity: 0.4;}
+    .Area_boxstyle_pagination .swiper-pagination-bullet-active { background-color: #fff; opacity: 1;}
+    .Area_boxstyle_pagination-white .swiper-pagination-bullet { background-color: #d8b29f; opacity: 0.4;}
+    .Area_boxstyle_pagination-white .swiper-pagination-bullet-active { background-color: #d8b29f; opacity: 1;}
+    /*202008男神節-輪播點點變長*/
+    .Area_boxstyle_pagination .swiper-pagination-bullet { border-radius: 20px; width: 6px; height: 6px; transition: opacity .3s, background-color .3s, width .3s; transition-delay: .3s, .3s, 0s;}
+    .Area_boxstyle_pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{ width: 24px; transition-delay: 0s;}
+    .Area_boxstyle_button { color: #d8b29f;} 
+    .Area_boxstyle_button-white { color: #d8b29f;} 
+    .Area_boxstyle_button.swiper-button-next:after, 
+    .Area_boxstyle_button.swiper-button-prev:after { transform: scale(0.8);}
+    .Area_boxstyle_scrollbar.swiper-scrollbar { left: 2%; width: 96%; height: 3px;}
+    .Area_boxstyle_scrollbar-white .swiper-scrollbar-drag { background: rgba(255,255,255,1); }

@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>momo購物網</title>
+<link rel="stylesheet" type="text/css" href="images/Layout.css">
+<link rel="stylesheet" type="text/css" href="images/uiLayout.css">
+
+<link rel="stylesheet" type="text/css" href="images/animate.css">
+<link rel="stylesheet" type="text/css" href="images/swiper.min.css">
+<link data-title="模組化公版套件" rel="stylesheet" type="text/css" href="images/PD_layout.css">
+<link data-title="輪播套件v5.2.1" rel="stylesheet" type="text/css" href="images/swiper.min.css">
+<style>
+  .fixed-ctrl {
+		position: fixed;
+		right: 0;
+		left: 0;
+		height: 150px;
+		bottom: 0px;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+		pointer-events: none;
+  }
+
+  .fixed-ctrl.show {
+		opacity: 1;
+		visibility: visible;
+  }
+  .fixed-box{
+	width: 100%;
+	max-width: 1054px;
+	margin: 0 auto; 
+	position: relative;
+  }
+  .left-box,
+  .right-box {
+		position: absolute;
+		opacity: 0;
+		transform: translateY(0);
+		transition: opacity 0.6s ease, transform 0.6s ease;
+		pointer-events: auto;
+  }
+
+  .left-box img, .right-box img{
+	width: auto;
+	height: 150px;
+  }
+  .img_pc img {
+		width: 83%;
+		display: block;
+		margin: 0 auto;
+  }
+
+  @media screen and (max-width: 767px) {
+		.fixed-ctrl{
+			height: 80px;
+			bottom: 50px;
+		}
+		.left-box img, .right-box img{
+			height: 80px;
+		}
+	}
+
+  .left-box {
+    	transform: translateX(-50px);
+  }
+
+  .right-box {
+    	transform: translateX(50px);
+  }
+
+  .show .left-box {
+		opacity: 1;
+		transform: translateX(0);
+  }
+
+  .show .right-box {
+		opacity: 1;
+		transform: translateX(0);
+  }
+</style>
+
+<meta charset="utf-8">
+
+</head>
+<body>
+	<div class="WRAPPER articleList">
+		<div class="Area" style="background-color: #1072cb;">
+			<div class="Area_logo">
+				<img class="lazy" data-original="images/logo.png">
+			</div>
+		</div>
+		<!-- 版頭頁籤-->
+		<div class="AreaHeader">
+			<div class="menu">
+				<ul class="labelbox">
+					<li>
+						<a class="label" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100016&osm=t04&utm_source=BD_015242&utm_medium=SIStopbutton-mustbuy&scm_activity=202503250216rqldfc6d" target="_blank">
+							<span class="label_btn">品牌熱銷</span>
+						</a>
+					</li>
+					<li>
+						<a class="label" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100023&osm=t04&utm_source=BD_015242&utm_medium=SIStopbutton-mositure&scm_activity=202503250216rqldfc6d" target="_blank">
+							<span class="label_btn">保濕修護系列</span>
+						</a>
+					</li>
+					<li>
+						<a class="label" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100041" target="_blank">
+							<span class="label_btn">抗痕修護系列</span>
+						</a>
+					</li>
+					<li>
+						<a class="label" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100018&osm=t04&utm_source=BD_015242&utm_medium=SIStopbutton-cleansers&scm_activity=202503250216rqldfc6d" target="_blank">
+							<span class="label_btn">溫和清潔系列</span>
+						</a>
+					</li>
+					<li>
+						<a class="label" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100005&osm=t04&utm_source=BD_015242&utm_medium=SIStopbutton-face&scm_activity=202503250216rqldfc6d" target="_blank">
+							<span class="label_btn">臉部潤澤系列</span>
+						</a>
+					</li>
+					<li>
+						<a class="label" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100030&osm=t04&utm_source=BD_015242&utm_medium=SIStopbutton-POA&scm_activity=202503250216rqldfc6d" target="_blank">
+							<span class="label_btn">油痘粉刺系列</span>
+						</a>
+					</li>
+				</ul>	
+			</div>		
+		</div>
+
+		<!--01版頭-->
+		<div  class="Area" >
+			<div class="Area01">
+				<!--版頭輪播pd--> 
+				<div class="topbn topbn_PC1 swiper-container">
+					<div class="swiper-wrapper">
+						<!-- 1 -->
+						<div class="swiper-slide">
+							<a href="https://www.momoshop.com.tw/edm/cmmedm.jsp?lpn=O3VDmWVx4Bx&n=1" target="_blank">
+								<img class="for_pc" src="images/Area_top01.jpg">
+								<img class="for_m" src="images/m_Area_top01.jpg">
+							</a>
+						</div>
+						<!-- 2 -->
+						<div class="swiper-slide">
+							<a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100018&p_orderType=4&showType=chessboardType&osm=t04" target="_blank">
+								<img class="for_pc" src="images/Cleanser-PC.jpg">
+								<img class="for_m" src="images/Cleanser-MB.jpg">
+							</a>
+						</div>
+						<!-- 3 -->
+						 <div class="swiper-slide">
+							<a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100016&p_orderType=4&showType=chessboardType&osm=t04" target="_blank">
+								<img class="for_pc" src="images/SA-PC.jpg">
+								<img class="for_m" src="images/SA-MB.jpg">
+							</a>
+						</div>
+						<!-- 4 -->
+						<div class="swiper-slide">
+							<a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100005&p_orderType=4&showType=chessboardType&osm=t04" target="_blank">
+								<img class="for_pc" src="images/PC-TOP-BN.jpg">
+								<img class="for_m" src="images/MB-TOP-BN.jpg">
+							</a>
+						</div>
+						<!-- 5 -->
+						<div class="swiper-slide">
+							<a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100030&p_orderType=4&showType=chessboardType&osm=t04" target="_blank">
+								<img class="for_pc" src="images/TOPBN-CRV_POA_PC.jpg">
+								<img class="for_m" src="images/TOPBN-CRV_POA_MB.jpg">
+							</a>
+						</div>
+						<!-- 6 -->
+						<div class="swiper-slide">
+							<a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100041&p_orderType=4&showType=chessboardType" target="_blank">
+								<img class="for_pc" src="images/TOPBN-CRV_AA_PC.jpg">
+								<img class="for_m" src="images/TOPBN-CRV_AA_MB.jpg">
+							</a>
+						</div>
+						<!-- 7 -->
+						<div class="swiper-slide">
+							<a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100017&p_orderType=4&showType=chessboardType&osm=t04" target="_blank">
+								<img class="for_pc" src="images/PC-TOP-BN-LC.jpg">
+								<img class="for_m" src="images/MB-TOP-BN.jpg">
+							</a>
+						</div>
+						<!-- 8 -->
+						<div class="swiper-slide">
+							<a href="https://www.momoshop.com.tw/edm/cmmedm.jsp?lpn=O8dxRzNX5iJ&n=1" target="_blank">
+								<img class="for_pc" src="images/PC-TOP-BN-CRM.jpg">
+								<img class="for_m" src="images/MB-TOP-BN-CRM.jpg">
+							</a>
+						</div>
+						<!-- 9 -->
+						<div class="swiper-slide">
+							<a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100007&p_orderType=4&showType=chessboardType&osm=t04" target="_blank">
+								<img class="for_pc" src="images/Area_top07.jpg">
+								<img class="for_m" src="images/m_Area_top07.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="pagination swiper-pagination"></div>
+				</div>  
+			</div>         
+		</div>  
+
+		<!--滿額贈-->
+		<div class="Area Area1220 Area_allbox">
+			<img class="lazy" data-original="images/Area_txt0.png" />
+			<a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100016&osm=t04&utm_source=BD_015242&utm_medium=SISgift-gift&scm_activity=202503250216rqldfc6d" target="_blank">
+				<img class="lazy for_pc" data-original="images/Area_BN1220_00.png"/>
+				<img class="for_m" src="images/Area_BN1220_00.png">
+			</a>
+		</div>
+
+		<!--CRM-->
+		<div class="Area Area1220 Area_allbox">
+			<a href="https://www.momoshop.com.tw/edm/cmmedm.jsp?lpn=O8dxRzNX5iJ&n=1" target="_blank">
+				<img class="lazy for_pc" data-original="images/CRM.png"/>
+			</a>
+		</div>
+
+		<!-- momo 獨家限量禮盒 -->
+		<div class="Area Area1220 Area_allbox">
+			<img class="momoStyle_is-pc" src="images/momo-only-title.png" alt="momo 獨家限量禮盒">
+		</div>  
+		<div class="Area Area1220 Area_allbox">
+			<div class="swiper bunnySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228263" target="_blank" title="玩具總動員系列-身體煥膚保養禮盒">
+							<img src="images/BOM-1.jpg" alt="玩具總動員系列-身體煥膚保養禮盒" class="momoStyle_lazyload">
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228263" target="_blank" title="玩具總動員系列-臉部修復保養禮盒">
+							<img src="images/BOM-2.jpg" alt="玩具總動員系列-臉部修復保養禮盒" class="momoStyle_lazyload">
+						</a>
+					</div>
+				</div>
+				<!-- Navigation buttons -->
+				<div class="swiper-button-prev ml-md-5 ml-1 d-none d-md-block"></div>
+				<div class="swiper-button-next mr-md-5 mr-1 d-none d-md-block"></div>
+
+				<!-- Pagination dots -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>  
+
+		<!--CRM-->
+		<div class="Area Area1220 Area_allbox">
+			<a href="https://www.momoshop.com.tw/edm/cmmedm.jsp?lpn=O3VDmWVx4Bx&n=1" target="_blank">
+				<img class="lazy for_pc" data-original="images/p7_0602.jpg"/>
+			</a>
+		</div>
+
+		<!-- top 5 -->
+		<div class="Area Area1220 Area_allbox">
+			<img src="images/CRV-12-TOP5_.jpg" usemap="#crvtop5">
+			<map name="crvtop5">
+				<area target="_blank" alt="清爽保濕乳&amp;潤澤修護霜" title="清爽保濕乳&amp;潤澤修護霜" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13828575" coords="48,210,1174,441" shape="rect">
+				<area target="_blank" alt="水楊酸煥膚淨嫩潔膚露" title="水楊酸煥膚淨嫩潔膚露" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12885777&str_category_code=2143100018&sourcePageType=4" coords="48,500,1176,734" shape="rect">
+				<area target="_blank" alt="極抗痕多肽緊緻修護霜" title="極抗痕多肽緊緻修護霜" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14781576" coords="48,790,1174,1022" shape="rect">
+				<area target="_blank" alt="養膚級防曬&amp;超能乳液" title="養膚級防曬&amp;超能乳液" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13729341" coords="47,1080,1174,1311" shape="rect">
+				<area target="_blank" alt="A醇勻亮修護精華" title="A醇勻亮修護精華" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=14140860" coords="47,1370,1174,1601" shape="rect">
+			</map>
+		</div>
+
+		<!-- 水楊酸煥膚淨嫩潔膚露 -->
+		<div class="Area Area1220 Area_allbox">
+			<div class="ytb-video-box">
+				<div class="video-container">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/WVslFmdUzaQ?si=XcDUZjR8rKk4C8MT" title="水楊酸煥膚淨嫩潔膚露" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+
+		<!-- PM + SPF50 -->
+		<div class="Area Area1220 Area_allbox">
+			<img src="images/PM-SPF50.jpg" usemap="#PM-SPF50">
+			<map name="PM-SPF50">
+				<area target="_blank" alt="全效清爽修護防曬乳" title="全效清爽修護防曬乳" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13729335" coords="51,191,1170,775" shape="rect">
+				<area target="_blank" alt="全效超級修護乳" title="全效超級修護乳" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11774027" coords="51,784,1172,1426" shape="rect">
+			</map>
+		</div>
+
+		<!-- AA -->
+		<div class="Area Area1220 Area_allbox">
+			<img src="images/AA.jpg" usemap="#AA">
+			<map name="AA">
+				<area target="_blank" alt="極抗痕 A 醇緊急修護精華" title="極抗痕 A 醇緊急修護精華" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14877083" coords="48,22,1175,22,1170,1082,50,937" shape="poly">
+				<area target="_blank" alt="緊緻小紫霜 - 高滲透仿生胜肽" title="緊緻小紫霜 - 高滲透仿生胜肽" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14781576" coords="50,945,1173,1094,1170,1817,51,1817,51,1248" shape="poly">
+			</map>
+		</div>
+
+		<!-- 魅力型男清潔指南 -->
+		<div class="Area Area1220 Area_allbox">
+			<!-- Image Map Generated by http://www.image-map.net/ -->
+			<img src="images/05-CLS-MEN.jpg" usemap="#cls-men">
+			<map name="cls-men">
+				<area target="_blank" alt="" title="" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15055818&amp;str_category_code=2143100049&amp;ctype=B&amp;Area=DgrpCategory&amp;sourcePageType=4" coords="50,22,1172,946" shape="rect">
+				<area target="_blank" alt="" title="" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15055820&amp;str_category_code=2143100049&amp;sourcePageType=4" coords="89,965,597,1637" shape="rect">
+				<area target="_blank" alt="" title="" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15055822&amp;str_category_code=2143100049&amp;ctype=B&amp;Area=DgrpCategory&amp;sourcePageType=4" coords="601,965,1131,1638" shape="rect">
+			</map>
+		</div>
+
+		<!-- 抗痘 routine ( POA ) -->
+		<div class="Area Area1220 Area_allbox">
+			<a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100030" target="_blank">
+				<img src="images/POA.jpg" class="lazy" data-original="images/POA.jpg" />
+			</a>
+		</div>
+
+		<!-- 育兒神隊友 -->
+		<div class="Area Area1220 Area_allbox">
+			<a href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100017&sourcePageType=4" target="_blank">
+				<img src="images/04-CRV_BODY.jpg" class="lazy" data-original="images/04-CRV_BODY.jpg" />
+			</a>
+		</div>
+		
+		<!-- 系列 -->
+		<div class="Area Area1220 Area_allbox">
+			<img src="images/SERIES.jpg" usemap="#series">
+			<map name="series">
+				<area target="_blank" alt="身體保濕系列" title="身體保濕系列" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100017" coords="50,20,599,722" shape="rect">
+				<area target="_blank" alt="極致抗痕修護系列" title="極致抗痕修護系列" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100041&sourcePageType=4" coords="621,22,1170,722" shape="rect">
+				<area target="_blank" alt="溫和清潔系列" title="溫和清潔系列" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100018" coords="54,746,410,1446" shape="rect">
+				<area target="_blank" alt="臉部潤澤系列" title="臉部潤澤系列" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100005" coords="433,745,791,1447" shape="rect">
+				<area target="_blank" alt="油痘粉刺系列" title="油痘粉刺系列" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2143100030" coords="814,744,1170,1448" shape="rect">
+			</map>
+		</div>
+	</div> 
+	<script charset="utf-8" language="javascript" type="text/javascript" src="https://image.momoshop.com.tw/ecm/js/jquery-1.12.4.js?t=20201119001"></script> 
+	<script  language="javascript" type="text/javascript" src="images/main.js"></script> 
+
+	<!-- iframe載入延遲-->
+	<script language="javascript" type="text/javascript" src="images/youtube.js"></script>	
+	<script src="images/jquery.rwdImageMaps.js"></script>
+
+	<!--延遲載圖-->
+	<script charset="utf-8" data-title="延遲載圖" language="javascript" type="text/javascript" src="https://image.momoshop.com.tw/ecm/js/edm/lazyload.js?t=202011170001"></script>
+	<script>
+		/*延遲載圖*/
+		var lazyLoadInstance = new LazyLoad({
+			elements_selector: ".articleList .lazy", //物件
+			//threshold: 300, //預載量 預設300
+		});
+
+		$(document).ready(function(e) {
+            $('img[usemap]').rwdImageMaps();
+        });
+
+		const ctrl = document.querySelector('.fixed-ctrl');
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 300) {
+			ctrl.classList.add('show');
+			} else {
+			ctrl.classList.remove('show');
+			}
+		});
+
+	</script>
+
+	<!--輪播套件-->
+	<script language="javascript" type="text/javascript" src="images/swiper.min.js"></script>
+	<script language="javascript" type="text/javascript" src="images/swiper_main.js"></script>
+</body>
+</html>
