@@ -303,10 +303,10 @@ $(function () {
 
 
   var bunnySwiper = new Swiper('.bunnySwiper', {
-      loop: true, // 啟用循環播放
+      // loop: true, // 啟用循環播放
       autoplay: {
-      delay: 5000, // 5秒自動切換
-      disableOnInteraction: false, // 使用者操作後仍然繼續自動播放
+        delay: 5000, // 5秒自動切換
+        disableOnInteraction: false, // 使用者操作後仍然繼續自動播放
       },
       navigation: {
           nextEl: ".swiper-button-next",
