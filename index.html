@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="images/index.css">
+</head>
+<body>
+    <div class="wrapper-box">
+        <!-- kv -->
+        <section class="area-kv">
+            <a href="https://skc.momoshop.com.tw/main" target="_blank">
+                <img src="images/area-01-pc.png" class="for-pc" alt="">
+                <img src="images/area-01.png" class="for-m" alt="">
+            </a>
+        </section>
+
+        <!-- 30 年抗氧權威 -->
+        <section class="area-box">
+            <a href="https://skc.momoshop.com.tw/main" target="_blank">
+                <img src="images/area-02.png" alt="">
+            </a>
+        </section>
+
+        <!-- 頂級抗老 精準解決方案 -->
+        <section class="area-box mt-4">
+            <!-- title -->
+            <div class="title">
+                <img src="images/area-03-title.png" alt="">
+            </div>
+
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11239822" target="_blank">
+                <img src="images/ce.png" alt="">
+            </a>
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14864045" target="_blank">
+                <img src="images/age_cream.png" alt="">
+            </a>
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13476671" target="_blank">
+                <img src="images/p-tiox.png" alt="">
+            </a>
+            <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11239824" target="_blank">
+                <img src="images/phyto_.png" alt="">
+            </a>
+        </section>
+
+        <!-- 新客首購禮遇 再送回購券  -->
+        <section class="area-box">
+            <!-- title -->
+            <div class="title">
+                <img src="images/area-04-title.png" alt="">
+            </div>
+            <img src="images/area-04.png" usemap="#area-04" alt="">
+            <map name="area-04">
+                <area target="_blank" alt="CE 抗氧化精華體驗組" title="CE 抗氧化精華體驗組" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11251353" coords="34,152,436,436" shape="rect">
+                <area target="_blank" alt="色修精華體驗組" title="色修精華體驗組" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11251406" coords="35,484,437,766" shape="rect">
+                <area target="_blank" alt="AGE 緊緻霜體驗組" title="AGE 緊緻霜體驗組" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=11632569" coords="34,818,437,1100" shape="rect">
+                <area target="_blank" alt="P-TIOX 精華體驗組" title="P-TIOX 精華體驗組" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=13572523" coords="453,816,857,1097" shape="rect">
+            </map>
+        </section>
+
+        <!-- skc 品牌旗艦館  -->
+        <section class="area-box">
+            <a href="https://skc.momoshop.com.tw/main" target="_blank">
+                <img src="images/go-skc.png" alt="">
+            </a>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="images/jquery.rwdImageMaps.js"></script>
+    <script>
+        $(function () {
+            $('img[usemap]').rwdImageMaps();
+        });
+    </script>
+</body>
+</html>
