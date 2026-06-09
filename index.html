@@ -4850,6 +4850,137 @@
           faqQuestion: questionLabel || ''
         });
       };
+
+      (function () {
+        const CONFIG = {
+          imageUrl: 'https://www.cht.com.tw/home/eshop/-/media/eshop-images/campaign-edm/digitalservices/2026/202605/20260515_floatevent_digitalservices.png?h=110&iar=0&w=110',
+          linkUrl: 'https://www.cht.com.tw/home/campaign/digitalservices',
+          openInNewTab: true,
+          width: 110,
+          right: 20,
+          bottom: 100,
+          rememberClose: true,
+          storageKey: 'cht_floating_icon_closed',
+          altText: '精采生活+ 領優惠'
+        };
+
+        if (CONFIG.rememberClose && sessionStorage.getItem(CONFIG.storageKey)) {
+          return;
+        }
+
+        const wrapper = document.createElement('div');
+        wrapper.id = 'cht-floating-icon-wrapper';
+
+        Object.assign(wrapper.style, {
+          position: 'fixed',
+          right: CONFIG.right + 'px',
+          bottom: CONFIG.bottom + 'px',
+          zIndex: '99999',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-end',
+          animation: 'chtFloatFadeIn 0.5s ease-out',
+          transition: 'bottom 0.24s ease, transform 0.24s ease, opacity 0.24s ease'
+        });
+
+        const closeBtn = document.createElement('div');
+        closeBtn.innerHTML = '✕';
+
+        Object.assign(closeBtn.style, {
+          width: '24px',
+          height: '24px',
+          borderRadius: '50%',
+          backgroundColor: 'rgba(0,0,0,0.55)',
+          color: '#fff',
+          fontSize: '14px',
+          fontWeight: 'bold',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          marginBottom: '-12px',
+          marginRight: '-8px',
+          position: 'relative',
+          zIndex: '2'
+        });
+
+        closeBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+
+          wrapper.style.animation = 'chtFloatFadeOut 0.3s ease-in forwards';
+
+          setTimeout(function () {
+            wrapper.remove();
+          }, 300);
+
+          if (CONFIG.rememberClose) {
+            sessionStorage.setItem(CONFIG.storageKey, '1');
+          }
+        });
+
+        const link = document.createElement('a');
+        link.href = CONFIG.linkUrl;
+
+        if (CONFIG.openInNewTab) {
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+        }
+
+        link.addEventListener('click', function () {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            eventCategory: '廣宣活動頁浮動版位',
+            eventAction: '廣宣活動頁浮動_加值集合頁_精采生活+',
+            eventLabel: '',
+            event: 'click-ga'
+          });
+        });
+
+        const img = document.createElement('img');
+        img.src = CONFIG.imageUrl;
+        img.alt = CONFIG.altText;
+
+        Object.assign(img.style, {
+          width: CONFIG.width + 'px',
+          height: 'auto',
+          display: 'block'
+        });
+
+        link.appendChild(img);
+        wrapper.appendChild(closeBtn);
+        wrapper.appendChild(link);
+
+        const updateFloatingBottom = function () {
+          const fixedPlus = document.querySelector('.fixed-plus');
+          const shouldAvoidFixedPlus = fixedPlus &&
+            !fixedPlus.classList.contains('is-hidden') &&
+            !fixedPlus.classList.contains('is-docked');
+          const fixedPlusHeight = shouldAvoidFixedPlus ? fixedPlus.offsetHeight : 0;
+          const offsetBottom = Math.max(CONFIG.bottom, fixedPlusHeight + 20);
+
+          wrapper.style.bottom = offsetBottom + 'px';
+        };
+
+        const style = document.createElement('style');
+        style.textContent = `
+          @keyframes chtFloatFadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+
+          @keyframes chtFloatFadeOut {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(30px); }
+          }
+        `;
+
+        document.head.appendChild(style);
+        document.body.appendChild(wrapper);
+
+        updateFloatingBottom();
+        window.addEventListener('resize', updateFloatingBottom);
+        window.addEventListener('scroll', updateFloatingBottom, { passive: true });
+      })();
     </script>
 
     <script src="vendor/bootstrap.min.js"></script>
