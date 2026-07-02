@@ -624,7 +624,7 @@ header nav .drop-down-menu {
   bottom: 0;
   background-color: white;
   box-shadow: 0 -10px 16px rgba(0, 0, 0, 0.1);
-  padding: 1.25rem 1rem;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
